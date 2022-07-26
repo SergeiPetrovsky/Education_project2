@@ -6,3 +6,5 @@ def index(request):
                         '<h2>Домашнее задание №1</h2><br> '
                         '<h1>Вывод произвольного текста</h1>')
 
+def about(request):
+    return render(request, 'about.html')
