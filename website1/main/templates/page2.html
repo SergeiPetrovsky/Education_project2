@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block page_content %}
+<style type="text/css">
+
+		#mypic, #mytext {position: absolute;}
+		#mypic   {  top: 200px; left: 70px;      }
+        #mytext  {  top: 200px;left: 900px;      }
+
+
+	</style>
+
+    <div>
+        <h1 align="center" >Страница 2</h1>
+<div id="mypic" >
+	<img src="https://www.hse.ru/data/2019/09/12/1537849837/3%D0%BF%D0%B8%D1%82%D0%BE%D0%BD%20%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.png" style="width:75%">
+</div>
+<div id="mytext">
+    <p>
+     <h4>Python — простой, но в то же время достаточно мощный язык программирования.</h4>
+     <h4> позволяющий упрощать выполнение задач практически в любой науке или индустрии.</h4>
+     <h4>С его помощью можно собирать, обрабатывать и визуализировать </h4>
+     <h4>данные самого разного характера.</h4>
+    </p>
+</div>
+
+    </div>
+
+{% endblock %}
