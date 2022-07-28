@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{%block title%}Главная{%endblock%}
+{%block title%}{{title}}{%endblock%}
 {% block page_content %}
     <style>
        .layer1 {
@@ -13,6 +13,12 @@
     <br>
      <div class="layer1">
          <h1>Домашнее задание №1</h1>
-          <h4>Вывод произвольного текстa</h4>
+         {% for i in tasks%}
+         <h4>{{i.title}}</h4>
+         <h5>{{i.body}}</h5>
+         <h6>{{i.created_on}}</h6>
+         <br>
+         {%endfor%}
+
      </div>
 {% endblock %}
