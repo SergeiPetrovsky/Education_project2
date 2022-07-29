@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Task
 
 def index(request):
-    task = Task.objects.all()
+    task = Task.objects.order_by("-created_on")
     parameters = {'title': 'Главная страница',
                   'tasks': task
                   }
@@ -20,3 +20,6 @@ def page2(request):
 
 def page3(request):
     return render(request, 'page3.html')
+
+def create(request):
+    return render(request, 'create.html')

@@ -6,19 +6,29 @@
         margin-left: 10%;
         padding: 10px;
        }
+       .layer2 {
+        margin-left: 30px;
+        padding: 10px;
+       }
       </style>
 
     <h1 align="center">Блок занятий №30</h1>
     <br>
     <br>
      <div class="layer1">
-         <h1>Домашнее задание №1</h1>
-         {% for i in tasks%}
-         <h4>{{i.title}}</h4>
-         <h5>{{i.body}}</h5>
-         <h6>{{i.created_on}}</h6>
-         <br>
-         {%endfor%}
+         <h1 >Список заданий</h1><br>
+         {% if tasks %}
+             {% for i in tasks%}
+                 <div class="layer2">
+                 <h4 >{{i.title}}</h4>
+                 <h5>{{i.body}}</h5>
+                 <h6>{{i.created_on}}</h6>
+                 <br>
+                 </div>
+             {%endfor%}
+         {%else%}
+            <h3>Список заданий пуст</h3>
+         {% endif%}
 
      </div>
 {% endblock %}
