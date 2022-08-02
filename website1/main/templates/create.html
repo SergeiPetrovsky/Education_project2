@@ -6,9 +6,18 @@
 <div class="container">
     <h1>Создание новой задачи</h1><br>
     <form method="post">
-        <input type="text" placeholder="Введите название" class="form-control"><br>
-        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+        {% csrf_token %}
+        <p style="font-family: Times ">
+            <b>Название</b>
+            {{form.title}}<br>
+            <b> Описание</b>
+            {{form.body}}<br>
+            <p>Исполнитель</p>
+            {{form.fio}}<br>
+            {{form.job}}<br>
+        </p>
         <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{error}}</span>
     </form>
 </div>
 {%endblock%}
